@@ -10,6 +10,7 @@ Features:
 ## Demo
 
 ![Preview](./statics/preview/demo-dark.gif)
+
 ![Preview](./statics/preview/demo-light.gif)
 
 ---
