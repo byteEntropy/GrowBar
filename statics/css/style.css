@@ -1,11 +1,132 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'JetBrains Mono', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  display: block;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* padding: 8px 12px calc(8px + env(safe-area-inset-bottom)) 12px; */
+  padding: 0.8rem;
+  background: transparent;
+  z-index: 1000;
+}
+
+.menu-list {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 720px;
+  margin-inline: auto; /* or margin: 0 auto */
+}
+
+.page {
+  display: flex;
+  flex: 1;
+  min-width: 0; /* prevent overflow */
+  transition: flex 0.25s ease;
+}
+
+.page:has(input:checked) {
+  flex: 2.5;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  color: #111;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.page:has(input:checked) .page-link {
+  background: #f3f4f6;
+}
+
+.page:has(input:checked) .page-title {
+  transform: scale(1);
+  opacity: 1;
+  display: inline;
+  pointer-events: auto;
+  font-size: 0.9rem;
+}
+
+.page-icon svg {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.page-title {
+  font-size: 0;
+  line-height: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+  transition: all 300ms ease;
+}
+
+.page-link:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+.page-link:active {
+  transform: translateY(0.1rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f1115;
+  }
+  .menu-list {
+    background: #16181d;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+  .page-link {
+    color: #e5e7eb;
+  }
+  .page:has(input:checked) .page-link {
+    background: #1f232b;
+  }
 }
