@@ -9,9 +9,7 @@ Features:
 
 ## Demo
 
-Dark Theme:
 ![Preview](./statics/preview/demo-dark.gif)
-Light Theme:
 ![Preview](./statics/preview/demo-light.gif)
 
 ---
@@ -22,6 +20,7 @@ Clone the repository:
 
 `bash
 git clone https://github.com/byteEntropy/RadialMenu.git
+`
 
 ## License
 
