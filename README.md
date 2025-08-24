@@ -19,9 +19,7 @@ Features:
 
 Clone the repository:
 
-`bash
-git clone https://github.com/byteEntropy/RadialMenu.git
-`
+`git clone https://github.com/byteEntropy/RadialMenu.git`
 
 ## License
 
