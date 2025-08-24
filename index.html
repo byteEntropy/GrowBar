@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Nav</title>
-    <meta name="description" content="Custom navbar with pure Html,Css - Repository can be found on https://github.com/byteEntropy">
-</head>
-<body>
-    
-</body>
+    <meta
+      name="description"
+      content="Custom navbar with pure Html,Css - Repository can be found on https://github.com/byteEntropy"
+    />
+  </head>
+  <body>
+    <nav class="menu">
+      <ul class="menu-list">
+        <li class="page">
+          <input type="radio" hidden="hidden" name="page" id="home" />
+          <label for="home">
+            <span class="page-icon">
+              <img src="./statics/icons/home.svg" alt="" aria-hidden="true" />
+            </span>
+            <span class="page-title">Home</span>
+          </label>
+        </li>
+        <li class="page">
+          <input type="radio" hidden="hidden" name="page" id="profile" />
+          <label for="profile">
+            <span class="page-icon">
+              <img
+                src="./statics/icons/profile.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </span>
+            <span class="page-title">Profile</span>
+          </label>
+        </li>
+        <li class="page">
+          <input type="radio" hidden="hidden" name="page" id="settings" />
+          <label for="settings">
+            <span class="page-icon">
+              <img
+                src="./statics/icons/settings.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </span>
+            <span class="page-title">Settings</span>
+          </label>
+        </li>
+        <li class="page">
+          <input type="radio" hidden="hidden" name="page" id="logout" />
+          <label for="logout">
+            <span class="page-icon">
+              <img src="./statics/icons/logout.svg" alt="" aria-hidden="true" />
+            </span>
+            <span class="page-title">Logout</span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </body>
 </html>
